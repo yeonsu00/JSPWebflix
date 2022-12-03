@@ -55,22 +55,25 @@
 
             %>
             <div class="col-lg-3 col-sm-6 mb-4">
-                <!-- Portfolio item 1-->
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-bs-toggle="modal" onclick="addToCart()" href="./movie.jsp?id=<%=listOfStore.get(i).getId() %>">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                <form name="addForm" action="./addCart.jsp?id=<%=store.getId() %>" method="post">
+                    <a href="./cart.jsp" class="btn btn-warning">장바구니</a>
+                    <div class="portfolio-item bg-light">
+                            <a class="portfolio-link" data-bs-toggle="modal" onclick="addToCart()" href="./addCartStore.jsp?id=<%=store.getId() %>">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <img class="img-fluid" src="market/images/<%=store.getFileName()%>" alt="..."/>
+                                </div>
+                            </a>
+
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"><%=store.getName() %>
+                            </div>
+                            <div class="portfolio-caption-subheading text-muted"><%=store.getPrice() %>원</div>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <img class="img-fluid" src="market/images/<%=listOfStore.get(i).getFileName()%>" alt="..."/>
-                        </div>
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading"><%=listOfStore.get(i).getName() %>
-                        </div>
-                        <div class="portfolio-caption-subheading text-muted"><%=listOfStore.get(i).getPrice() %>원</div>
                     </div>
-                </div>
+                </form>
             </div>
             <%
                 }

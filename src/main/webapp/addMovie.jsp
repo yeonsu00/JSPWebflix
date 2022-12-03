@@ -29,7 +29,7 @@
 <div class="d-flex justify-content-center">
     <div class="card col-lg-5 col-sm-6 mb-4 text-light" style="background-color: #2c3034">
         <div class="card-body">
-            <form name="addMovieForm" method="post" enctype="multipart/form-data" action="insertData_process.jsp">
+            <form name="addMovieForm" method="post" enctype="multipart/form-data" action="main.jsp">
                 <div class="mb-3">
                     <label for="name" class="form-label" name="name">제목</label>
                     <input type="text" class="form-control" id="name"/>

@@ -53,7 +53,7 @@
 
         <div class="card col-lg-6 col-sm-6 mb-4" style="background-color: #2c3034">
             <div class="card-body">
-                <form name="membershipForm" action="myPage.jsp" method="post">
+                <form name="membershipForm" action="main.jsp" method="post">
                     <div class="mb-3">
                         <label for="cardNumber" class="form-label">카드번호</label>
                         <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000">

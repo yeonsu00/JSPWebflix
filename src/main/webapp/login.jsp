@@ -48,7 +48,7 @@
         <div class="d-flex justify-content-center">
             <div class="card bg-dark" style="width: 25rem;">
                 <div class="card-body">
-                    <form name="loginForm" action="main.jsp" method="post">
+                    <form name="loginForm" action="login_process.jsp" method="post">
                         <div class="form-floating">
                             <input type="text" class="form-control" name="id" id="id"/>
                             <label for="id" class="text-dark">아이디</label>
@@ -63,12 +63,10 @@
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" value="로그인" class="btn btn-outline-warning btn-xl text-uppercase"/>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
-        <%--        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>--%>
     </div>
 </header>
 </body>

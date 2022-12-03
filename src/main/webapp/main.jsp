@@ -41,9 +41,9 @@
                 <li class="nav-item"><a class="nav-link" href="myPage.jsp">MYPAGE</a></li>
                 <li class="nav-item"><a class="nav-link" href="logout.jsp">LOGOUT</a></li>
                 <%
-                    String id = request.getParameter("id");
+                    String id = (String)session.getAttribute("userID");
                     System.out.println(id);
-                    if (id == "admin") {
+                    if (id.equals("admin")) {
                 %>
                 <li class="nav-item"><a class="nav-link" href="addMovie.jsp">영화추가</a></li>
                 <%
@@ -57,9 +57,9 @@
 <!--swiper 들어갈 부분 https://numerok.tistory.com/140 -->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">Welcome To Our Studio!</div>
+        <div class="masthead-subheading">Welcome To Our WEBFLIX!</div>
         <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+        <a class="btn btn-primary btn-xl text-uppercase" href="membership.jsp">영화보러가기</a>
     </div>
 </header>
 

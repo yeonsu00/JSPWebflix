@@ -40,8 +40,9 @@
                 <li class="nav-item"><a class="nav-link" href="myPage.jsp">MYPAGE</a></li>
                 <li class="nav-item"><a class="nav-link" href="logout.jsp">LOGOUT</a></li>
                 <%
-                    String id = request.getParameter("id");
-                    if (id == "admin") {
+                    String id = (String)session.getAttribute("userID");
+                    System.out.println(id);
+                    if (id.equals("admin")) {
                 %>
                 <li class="nav-item"><a class="nav-link" href="addMovie.jsp">영화추가</a></li>
                 <%

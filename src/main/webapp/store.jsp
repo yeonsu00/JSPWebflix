@@ -1,7 +1,7 @@
 <%@ page import="dao.StoreRepository" %>
 <%@ page import="dto.Store" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page errorPage="errorPage.jsp" %>
+<%--<%@ page errorPage="errorPage.jsp" %>--%>
 <%--
   Created by IntelliJ IDEA.
   User: yeons

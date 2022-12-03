@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="errorPage.jsp" %>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -23,7 +24,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./market/css/styles.css" rel="stylesheet"/>
 </head>
-<body class="bg-dark">
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="main.jsp">Webflix</a>
@@ -39,7 +40,15 @@
                 <li class="nav-item"><a class="nav-link" href="membership.jsp">MEMBERSHIP</a></li>
                 <li class="nav-item"><a class="nav-link" href="myPage.jsp">MYPAGE</a></li>
                 <li class="nav-item"><a class="nav-link" href="logout.jsp">LOGOUT</a></li>
+                <%
+                    String id = request.getParameter("id");
+                    System.out.println(id);
+                    if (id == "admin") {
+                %>
                 <li class="nav-item"><a class="nav-link" href="addMovie.jsp">영화추가</a></li>
+                <%
+                    }
+                %>
             </ul>
         </div>
     </div>
@@ -54,15 +63,5 @@
     </div>
 </header>
 
-<%--<section class="page-section bg-dark" id="movie">--%>
-<%--    <jsp:include page="movies.jsp"/>--%>
-<%--</section>--%>
-<%--<section class="page-section bg-dark" id="store">--%>
-<%--    <jsp:include page="store.jsp"/>--%>
-<%--</section>--%>
-<%--<section class="page-section" id="membership">--%>
-<%--    <jsp:include page="membership.jsp"/>--%>
-<%--</section>--%>
-<%--<%@ include file="footer.jsp" %>--%>
 </body>
 </html>

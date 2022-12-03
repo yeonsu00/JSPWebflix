@@ -1,5 +1,7 @@
 <%@ page import="dao.MovieRepository" %>
-<%@ page import="dto.Movie" %><%--
+<%@ page import="dto.Movie" %>
+<%@ page errorPage="errorPage.jsp" %>
+<%--
   Created by IntelliJ IDEA.
   User: yeons
   Date: 2022-12-02
@@ -13,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>영화 페이지</title>
+    <title>영화 상세 페이지</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Font Awesome icons (free version)-->
@@ -27,9 +29,9 @@
 <body class="bg-dark">
 <%@ include file="header.jsp" %>
 <%
-    String id = request.getParameter("id");
+    String movieid = request.getParameter("id");
     MovieRepository dao = MovieRepository.getInstance();
-    Movie movie = dao.getMovieById(id);
+    Movie movie = dao.getMovieById(movieid);
 %>
 <div class="container text-light">
     <div class="row justify-content-center">

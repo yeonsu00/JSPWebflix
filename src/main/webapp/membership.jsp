@@ -1,6 +1,8 @@
 <%@ page import="dao.MembershipRepository" %>
 <%@ page import="dto.Membership" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page errorPage="errorPage.jsp" %>
+<%--
   Created by IntelliJ IDEA.
   User: yeons
   Date: 2022-12-02

@@ -2,6 +2,7 @@
 <%@ page import="dto.Store" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Enumeration"%>
+<%@ page errorPage="errorPage.jsp" %>
 <%--
   Created by IntelliJ IDEA.
   User: yeons
@@ -24,11 +25,6 @@
 
     StoreRepository dao = StoreRepository.getInstance();
 
-    Store store = dao.getStoreById(id);
-    if (store == null) {
-        response.sendRedirect("exceptionNoId.jsp");
-    }
-
     ArrayList<Store> goodsList = dao.getAllStore();
     Store goods = new Store();
     for (int i = 0; i < goodsList.size(); i++) {
@@ -44,6 +40,7 @@
         session.setAttribute("cartlistStore", list);
     }
 
+
     int cnt = 0;
     Store goodsQnt = new Store();
 
@@ -51,10 +48,13 @@
         goodsQnt = list.get(i);
         if (goodsQnt.getId().equals(id)) {
             cnt++;
+            int orderQuantity = goodsQnt.getQuantity() + 1;
+            goodsQnt.setQuantity(orderQuantity);
         }
     }
 
     if (cnt == 0) {
+        goods.setQuantity(1);
         list.add(goods);
     }
 

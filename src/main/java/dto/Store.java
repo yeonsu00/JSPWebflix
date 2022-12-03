@@ -4,6 +4,7 @@ public class Store {
     private String id;
     private String name;
     private int price;
+    private int quantity;   //장바구니에 담은 개수
 
     public int getQuantity() {
         return quantity;
@@ -12,8 +13,6 @@ public class Store {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
-    private int quantity;   //장바구니에 담은 개수
 
     public Store() {
         super();

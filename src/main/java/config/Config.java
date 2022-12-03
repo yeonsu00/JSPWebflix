@@ -54,6 +54,7 @@ public class Config {
     private final String tool = "jdbc:mysql://";
     private final String port = "3306";
 
+//    private final String domain = "127.0.0.1";
     private final String domain = "localhost";
     private final String id = "root";
     private final String pw = "NewSt@rt!70";
@@ -65,6 +66,7 @@ public class Config {
     public Connection sqlLogin() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, id, pw);
 
         } catch (Exception e) {

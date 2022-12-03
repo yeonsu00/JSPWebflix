@@ -10,7 +10,12 @@
 <head>
     <title>에러 페이지</title>
 </head>
-<body>
-
+<body id="page-top">
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-heading text-uppercase">잘못 요청된 페이지입니다.</div>
+    </div>
+</header>
 </body>
 </html>

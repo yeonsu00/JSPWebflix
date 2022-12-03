@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="errorPage.jsp" %>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -71,7 +72,7 @@
                     %>
                     <tr>
                         <td>
-                            <%=store.getId() %> - <%=store.getName() %>
+                            <%=store.getName() %>
                         </td>
                         <td><%=store.getPrice() %>
                         </td>

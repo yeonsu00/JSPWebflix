@@ -1,6 +1,7 @@
 <%@ page import="dao.MovieRepository" %>
 <%@ page import="dto.Movie" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page errorPage="errorPage.jsp" %>
 <%--
   Created by IntelliJ IDEA.
   User: yeons
@@ -28,6 +29,7 @@
 </head>
 <body class="bg-dark">
 <%@ include file="header.jsp" %>
+
 <section class="page-section bg-dark" id="portfolio">
     <div class="container">
         <div class="text-center">

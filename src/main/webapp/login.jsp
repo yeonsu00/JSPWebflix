@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="errorPage.jsp" %>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -41,25 +42,28 @@
 <!-- Masthead-->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">Welcome To WEBFLIX</div>
-        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+<%--        <div class="masthead-subheading">Welcome To WEBFLIX</div>--%>
+        <div class="masthead-heading text-uppercase">Welcome To WEBFLIX</div>
 
         <div class="d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-dark" style="width: 25rem;">
                 <div class="card-body">
-                    <form name="loginForm" action="login_process.jsp" method="post">
+                    <form name="loginForm" action="main.jsp" method="post">
                         <div class="form-floating">
                             <input type="text" class="form-control" name="id" id="id"/>
-                            <label for="id">아이디</label>
+                            <label for="id" class="text-dark">아이디</label>
                         </div>
                         <br>
                         <div class="form-floating">
                             <input type="password" class="form-control" name="password" placeholder="Password" id="password"/>
-                            <label for="password">비밀번호</label>
+                            <label for="password" class="text-dark">비밀번호</label>
                         </div>
                         <br>
                         <br>
-                        <input type="submit" value="로그인" class="btn btn-primary btn-xl text-uppercase"/>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <input type="submit" value="로그인" class="btn btn-outline-warning btn-xl text-uppercase"/>
+                        </div>
+
                     </form>
                 </div>
             </div>

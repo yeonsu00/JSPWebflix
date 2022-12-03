@@ -1,6 +1,8 @@
 <%@ page import="dao.StoreRepository" %>
 <%@ page import="dto.Store" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page errorPage="errorPage.jsp" %>
+<%--
   Created by IntelliJ IDEA.
   User: yeons
   Date: 2022-12-02
@@ -45,6 +47,12 @@
             <h3 class="section-subheading text-muted">팝콘과 음료를 배달시켜 먹어요</h3>
         </div>
         <div class="row">
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="./cart.jsp" class="btn btn-warning" type="button">장바구니</a>
+                <p>
+            </div>
+            <p>
             <%
                 StoreRepository dao = StoreRepository.getInstance();
                 ArrayList<Store> listOfStore = dao.getAllStore();
@@ -55,8 +63,8 @@
 
             %>
             <div class="col-lg-3 col-sm-6 mb-4">
-                <form name="addForm" action="./addCart.jsp?id=<%=store.getId() %>" method="post">
-                    <a href="./cart.jsp" class="btn btn-warning">장바구니</a>
+                <form name="addForm" action="./addCartStore.jsp?id=<%=store.getId() %>" method="post">
+
                     <div class="portfolio-item bg-light">
                             <a class="portfolio-link" data-bs-toggle="modal" onclick="addToCart()" href="./addCartStore.jsp?id=<%=store.getId() %>">
                                 <div class="portfolio-hover">

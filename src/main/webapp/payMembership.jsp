@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="errorPage.jsp" %>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -31,9 +32,9 @@
 <body class="bg-dark">
 <%@ include file="header.jsp" %>
 <%
-    String id = request.getParameter("id");
+    String membershipid = request.getParameter("id");
     MembershipRepository dao = MembershipRepository.getInstance();
-    Membership membership = dao.getMembershipById(id);
+    Membership membership = dao.getMembershipById(membershipid);
 %>
 <div class="container">
     <div class="text-center" style="margin-bottom: 80px">
@@ -79,9 +80,6 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
 </body>
 </html>

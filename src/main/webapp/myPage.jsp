@@ -25,6 +25,6 @@
 </head>
 <body class="bg-dark">
 <%@ include file="header.jsp" %>
-마이페이지
+
 </body>
 </html>

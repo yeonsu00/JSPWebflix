@@ -53,7 +53,7 @@
                                 Illustration
                             </li>
                         </ul>
-                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                        <button class="btn btn-primary btn-xl text-uppercase" onclick="location.href='playMovie.jsp'" type="button">
                             영화 보기
                         </button>
                     </div>

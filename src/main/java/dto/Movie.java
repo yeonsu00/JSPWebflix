@@ -5,11 +5,43 @@ public class Movie {
     private String name;    //영화제목
     private String genre; //장르
     private String description; //영화상세소개
-    //감독
-    //출연자
-    //등급 (15세 관람가)
-    //러닝타임
+    private String director; //감독
+    private String[] actors; //출연자
+    private String grade; //등급 (15세 관람가)
+    private int runningTime; //러닝타임
     private String fileName; //사진파일 이름
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String[] getActors() {
+        return actors;
+    }
+
+    public void setActors(String[] actors) {
+        this.actors = actors;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public int getRunningTime() {
+        return runningTime;
+    }
+
+    public void setRunningTime(int runningTime) {
+        this.runningTime = runningTime;
+    }
 
     public Movie() {
         super();

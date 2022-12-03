@@ -25,5 +25,42 @@
 </head>
 <body class="bg-dark">
 <%@ include file="header.jsp" %>
+<div class="d-flex justify-content-center">
+    <div class="card col-lg-5 col-sm-6 mb-4 text-light" style="background-color: #2c3034">
+        <div class="card-body">
+            <form name="addMovieForm" method="post" enctype="multipart/form-data" action="insertData_process.jsp">
+                <div class="mb-3">
+                    <label for="name" class="form-label" name="name">제목</label>
+                    <input type="text" class="form-control" id="name"/>
+                </div>
+                <div class="mb-3">
+                    <label for="genre" class="form-label" name="genre">장르</label>
+                    <input type="text" class="form-control" id="genre"/>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label" name="description">영화설명</label>
+                    <input type="text" class="form-control" id="description"/>
+                </div>
+                <div class="mb-3">
+                    <label for="director" class="form-label" name="director">감독</label>
+                    <input type="text" class="form-control" id="director"/>
+                </div>
+                <div class="mb-3">
+                    <label for="grade" class="form-label" name="grade">등급</label>
+                    <input type="text" class="form-control" id="grade"/>
+                </div>
+                <div class="mb-3">
+                    <label for="runningTime" class="form-label" name="runningTime">러닝타임</label>
+                    <input type="text" class="form-control" id="runningTime"/>
+                </div>
+                <div class="mb-3">
+                    <label for="fileName" class="form-label" name="fileName">표지</label>
+                    <input type="file" class="form-control" id="fileName"/>
+                </div>
+                <button type="submit" class="btn btn-primary">영화 추가하기</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

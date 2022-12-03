@@ -34,26 +34,22 @@
 <div class="container text-light">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <div class="container">
+            <div class="container my-5" >
                 <div class="row">
+                    <h2 class="text-uppercase"><%=movie.getName()%></h2>
+                    <p class="item-intro text-muted"><%=movie.getGrade()%>&emsp;<%=movie.getGenre()%>&emsp;<%=movie.getRunningTime()%>분</p>
                     <div class="col">
-                        <h2 class="text-uppercase"><%=movie.getName()%>
-                        </h2>
-                        <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                         <img class="img-fluid d-block mx-auto" src="market/images/<%=movie.getFileName()%>" alt="..."/>
                     </div>
-                    <div class="col">
-                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                            repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                            nostrum, reiciendis facere nemo!</p>
+                    <div class="col mt-">
+                        <p><%=movie.getDescription()%></p>
                         <ul class="list-inline">
                             <li>
-                                <strong>Client:</strong>
-                                Threads
+                                <strong>감독:</strong>
+                                <%=movie.getDirector()%>
                             </li>
                             <li>
-                                <strong>Category:</strong>
+                                <strong>출연자:</strong>
                                 Illustration
                             </li>
                         </ul>

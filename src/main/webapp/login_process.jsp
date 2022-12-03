@@ -18,10 +18,10 @@
         if (user_id.equals("admin") && user_pw.equals("1234")) {
             session.setAttribute("userID", user_id);
             session.setAttribute("userPW", user_pw);
-            System.out.println("<script>alert('" + user_id + "님 환영합니다!');</script>");
+//            System.out.println("<script>alert('" + user_id + "님 환영합니다!');</script>");
             response.sendRedirect("main.jsp");
         } else {
-            System.out.println("<script>alert('아이디와 비밀번호를 다시 입력해주세요');</script>");
+//            System.out.println("<script>alert('아이디와 비밀번호를 다시 입력해주세요');</script>");
         }
     %>
 </body>
